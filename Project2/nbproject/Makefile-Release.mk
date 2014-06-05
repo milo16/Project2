@@ -37,6 +37,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Character.o \
 	${OBJECTDIR}/Darth.o \
+	${OBJECTDIR}/Freddy.o \
+	${OBJECTDIR}/Majin.o \
 	${OBJECTDIR}/Player.o \
 	${OBJECTDIR}/main.o
 
@@ -74,6 +76,16 @@ ${OBJECTDIR}/Darth.o: Darth.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Darth.o Darth.cpp
+
+${OBJECTDIR}/Freddy.o: Freddy.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Freddy.o Freddy.cpp
+
+${OBJECTDIR}/Majin.o: Majin.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Majin.o Majin.cpp
 
 ${OBJECTDIR}/Player.o: Player.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -6,6 +6,8 @@
                    projectFiles="true">
       <itemPath>Character.h</itemPath>
       <itemPath>Darth.h</itemPath>
+      <itemPath>Freddy.h</itemPath>
+      <itemPath>Majin.h</itemPath>
       <itemPath>Player.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -17,6 +19,8 @@
                    projectFiles="true">
       <itemPath>Character.cpp</itemPath>
       <itemPath>Darth.cpp</itemPath>
+      <itemPath>Freddy.cpp</itemPath>
+      <itemPath>Majin.cpp</itemPath>
       <itemPath>Player.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -50,6 +54,14 @@
       <item path="Darth.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Darth.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Freddy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Freddy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Majin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Majin.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -86,6 +98,14 @@
       <item path="Darth.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Darth.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Freddy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Freddy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Majin.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Majin.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
