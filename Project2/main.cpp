@@ -17,6 +17,8 @@ using namespace std;
 #include "Character.h"
 #include "Player.h"
 #include "Darth.h"
+#include "Freddy.h"
+#include "Majin.h"
 
 //No global constants
 
@@ -117,10 +119,170 @@ int main(int argc, char** argv) {
     if (player->isAlive())
     {
         cout << "Congratulations, you defeated " << vader->name << endl;
+        
+        // print plot for level 2
+        
+        
+        //cin.clear();
+        cout <<"Press ENTER twice to continue"<<endl;
+        cin.ignore(2);
+        //cin.ignore();
+       
+        // player improves to next level
+        player->incLevel();
+        
+        // recalculate players new HP max
+        player->hp = player->calcHP();
     
     }
     
-    return 0;
+    
+     // LEVEL 2
+    //
+    //
+    //
+    
+    // create Krueger object
+    Freddy *kruger = new Freddy();
+    
+    //Display player and Freddy Status
+    cout <<"-------------------------------"<<endl;
+    player->dispStats();
+    cout << endl;
+    kruger->dispStats();
+    cout <<"-------------------------------"<<endl;
+    
+    while(player->isAlive() && kruger->isAlive())
+    {
+        // player attacks
+        attackType = getAttack();
+        damage = player->attack(attackType);
+        kruger->hp -= damage;
+        
+        // print battle sequence
+        // if successful 
+        if (damage > 0)
+        {
+            cout << player->name;
+            printAttType(attackType);
+            cout << kruger->name << " for " << damage << " HP!" << endl;
+        }
+        else // we missed
+        {
+            cout << player->name << " missed!!!" << endl;
+        }
+            
+        // enemy attacks
+        if(kruger->isAlive())
+        {
+            damage = kruger->attack();
+            player->hp -= damage;
+        }
+        
+    }
+    
+    //If player is not alive then is dead
+    //else Freddy Kruger is dead
+    
+    if (!player->isAlive())
+    {
+        cout << endl << player->name << " is dead :(" << endl << endl;
+        return 0;
+    }
+    else
+        cout << endl << kruger->name << " has died!" << endl << endl;
+    
+     if (player->isAlive())
+    {
+        // congratulations message
+        // You defeat your opponent
+        cout << endl << "Congratulations, you defeated " << kruger->name << endl;
+        
+        
+        // print plot for level 3
+        
+        
+         cout <<"Press ENTER twice to continue"<<endl;
+        cin.ignore(2);
+        
+        // player improves to next level
+        player->incLevel();
+        
+        // recalculate players new HP max
+        player->hp = player->calcHP();
+     }
+    
+    
+     //
+    //
+    // LEVEL 3
+    //
+    //
+    
+    // create Buu object
+    Majin *buu = new Majin();
+    
+    //Display player and Buu Status
+    cout <<"-------------------------------"<<endl;
+    player->dispStats();
+    cout << endl;
+    buu->dispStats();
+    cout <<"-------------------------------"<<endl;
+    
+    while(player->isAlive() && buu->isAlive())
+    {
+        // player attacks
+        attackType = getAttack();
+        damage = player->attack(attackType);
+        buu->hp -= damage;
+        
+        // print battle sequence
+        // if successful 
+        if (damage > 0)
+        {
+            cout << player->name;
+            printAttType(attackType);
+            cout << buu->name << " for " << damage << " HP!" << endl;
+        }
+        else // we missed
+        {
+            cout << player->name << " missed!!!" << endl;
+        }
+            
+        // enemy attacks
+        if(buu->isAlive())
+        {
+            damage = buu->attack();
+            player->hp -= damage;
+        }
+        
+    }
+    
+    //If player is not alive then is dead
+    //else Freddy Kruger is dead
+    
+    if (!player->isAlive())
+    {
+        cout << endl << player->name << " is dead :(" << endl << endl;
+        return 0;
+    }
+    else
+        cout << endl << buu->name << " has died!" << endl << endl;
+    
+    if (player->isAlive())
+    {
+        // congratulations message
+        cout << endl << "Congratulations, you defeated " << buu->name << endl;
+        
+        // display message
+        cout << " YOU won the game" << endl;
+ 
+
+    }
+    
+    
+    
+   return 0;
 }
 
 //Function displays type of attacks
